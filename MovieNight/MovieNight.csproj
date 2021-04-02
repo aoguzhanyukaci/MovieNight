@@ -177,8 +177,10 @@
     <Compile Include="Areas\Admin\ViewModels\DashboardViewModel.cs" />
     <Compile Include="Areas\Admin\ViewModels\MovieYearCount.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -190,6 +192,10 @@
     <Compile Include="Migrations\202103311009097_ReleasedFix.Designer.cs">
       <DependentUpon>202103311009097_ReleasedFix.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104021011428_MovieFansRelation.cs" />
+    <Compile Include="Migrations\202104021011428_MovieFansRelation.Designer.cs">
+      <DependentUpon>202104021011428_MovieFansRelation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DbSeed.cs" />
@@ -198,6 +204,9 @@
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Utilities\WebUtilities.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\PaginationInfoViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\album.css" />
@@ -2223,6 +2232,8 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_LayoutHome.cshtml" />
+    <Content Include="Views\Shared\_LoginPartialHome.cshtml" />
+    <Content Include="Views\Movies\Favorites.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2248,6 +2259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202103311009097_ReleasedFix.resx">
       <DependentUpon>202103311009097_ReleasedFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104021011428_MovieFansRelation.resx">
+      <DependentUpon>202104021011428_MovieFansRelation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
